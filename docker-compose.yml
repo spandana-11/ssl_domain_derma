@@ -202,11 +202,14 @@ services:
     volumes:
       - ./reverse-proxy/conf.d:/etc/nginx/conf.d
       - ./reverse-proxy/certs:/etc/ssl/certs
+      - ./reverse-proxy/html:/usr/share/nginx/html  # 👈 Required for Certbot --webroot
+      - /etc/letsencrypt:/etc/letsencrypt             # 👈 Let’s Encrypt SSL certs (read-only is optional)
     depends_on:
       - clinic-admin-web
       - main-admin-web
     networks:
       - app-network
+    restart: always
 
 
 
