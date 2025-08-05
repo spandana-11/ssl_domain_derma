@@ -1,5 +1,5 @@
 // export const BASE_URL = 'http://alb-dev-sc-197990416.ap-south-1.elb.amazonaws.com/api'
-const ipUrl = '13.203.6.65:9090'
+const ipUrl =  "dermacare-admin.manikanta.food"
 //const ipUrl = '13.127.106.17'
 
 export const BASE_URL = `http://${ipUrl}`
